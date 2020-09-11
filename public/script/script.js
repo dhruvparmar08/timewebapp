@@ -1,4 +1,8 @@
 // JavaScript source code
+var person = "";
+function name() {
+    person = prompt("Please enter your name", "Dhruv");
+}
 function realtimeClock() {
     var d = new Date();
     var hours = d.getHours();
@@ -130,7 +134,12 @@ function realtimeClock() {
     minutes = ("0" + minutes).slice(-2);
     seconds = ("0" + seconds).slice(-2);
 
-    document.getElementById('zone').innerHTML = zon +" <sub>Dhruv</sub>";
+    if(person == "" || person == null) {
+        name();
+    } else {
+        document.getElementById('zone').innerHTML = zon +" <sub>"+ person +"</sub>";
+    }
+    
     document.getElementById("clock").innerHTML = hours + " : " + minutes + " : " + seconds + " " + ampm;
     document.getElementById('img-background').src = images;
     document.getElementById('clock1').innerHTML = date1 + "/" + month + "/" + year + " <sub>" + days[d.getDay()] +"</sub>";
