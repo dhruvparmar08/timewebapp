@@ -1,7 +1,7 @@
 // JavaScript source code
 var person = "";
 function name() {
-    person = prompt("Please enter your name", "Dhruv");
+    person = prompt("Please enter your name", "Samrin");
 }
 function realtimeClock() {
     var d = new Date();
